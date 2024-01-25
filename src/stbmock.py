@@ -53,6 +53,7 @@ def stb_login(storage: Storage, data_dir: str, udpxy_config: UdpxyConfig, config
 
     if len(tokenMatch) == 0:
         print("提取EncryptToken失败")
+        print(response.text)
         return False
 
     encrypt_token: str = tokenMatch[0]
