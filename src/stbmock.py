@@ -112,7 +112,7 @@ def stb_login(storage: Storage, data_dir: str, udpxy_config: UdpxyConfig, config
     headers['cookie'] = cookie
 
     tokenMatch: list = re.findall(
-        r'name="UserToken" value="([0-9a-zA-Z]{32}?)"', response.text)
+        r'name="userToken" value="([0-9a-zA-Z]{32}?)"', response.text)
 
     if len(tokenMatch) == 0:
         print("提取UserToken失败")
